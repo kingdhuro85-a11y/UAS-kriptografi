@@ -1,61 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Simpan Akun Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Account Vault</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.card{
+
+width:90%;
+max-width:500px;
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(0,0,0,.6);
+
+backdrop-filter:blur(10px);
+
+border:2px solid #00ffff;
+
+box-shadow:0 0 25px #00ffff;
+
+color:white;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+font-weight:bold;
+
+color:#00ffff;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#ddd;
+
+}
+
+label{
+
+display:block;
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:bold;
+
+}
+
+input{
+
+width:100%;
+
+padding:15px;
+
+background:#111827;
+
+border:1px solid #00ffff;
+
+border-radius:10px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+margin-top:25px;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+background:#00c6ff;
+color:white;
+cursor:pointer;
+
+}
+
+.link{
+text-align:center;
+margin-top:20px;
+}
+
+.link a{
+color:#00ffff;
+text-decoration:none;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>Simpan Akun Game</h1>
+<div class="card">
 
-<form method="POST" action="/">
+<div class="title">
+🎮 GAME ACCOUNT VAULT
+</div>
 
-<input type="hidden"
-name="aksi"
-value="simpan">
+<div class="subtitle">
+Secure AES Encryption
+</div>
 
-<input
-type="text"
-name="game"
-placeholder="Nama Game"
-required>
+<form action="/simpan" method="POST">
 
-<br><br>
+<label>🎮 Nama Game</label>
+<input type="text" name="game" required>
 
-<input
-type="text"
-name="username"
-placeholder="Username"
-required>
+<label>👤 Username</label>
+<input type="text" name="username" required>
 
-<br><br>
+<label>🔒 Password</label>
+<input type="password" name="password" required>
 
-<input
-type="password"
-name="password"
-placeholder="Password"
-required>
-
-<br><br>
-
-<input
-type="password"
-name="master"
-placeholder="Master Password"
-required>
-
-<br><br>
+<label>🛡 Master Password</label>
+<input type="password" name="master" required>
 
 <button type="submit">
-SIMPAN AKUN
+💾 SIMPAN AKUN
 </button>
 
 </form>
 
-<br>
+<div class="link">
+<a href="/dashboard">📊 Lihat Data Tersimpan</a>
+</div>
 
-<a href="/dashboard">
-Lihat Data
-</a>
+</div>
 
 </body>
 </html>
