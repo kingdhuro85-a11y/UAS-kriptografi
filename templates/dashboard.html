@@ -2,17 +2,56 @@
 <html>
 <head>
 <title>Dashboard</title>
+
+<style>
+
+body{
+background:#0f172a;
+font-family:Arial;
+color:white;
+padding:30px;
+}
+
+h1{
+color:#00ffff;
+}
+
+input{
+padding:12px;
+width:300px;
+}
+
+button{
+padding:12px;
+background:#00c6ff;
+border:none;
+color:white;
+}
+
+table{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid #444;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#00c6ff;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>Dashboard Data Akun</h1>
+<h1>📊 Dashboard Akun Game</h1>
 
-<form method="POST" action="/">
-
-<input
-type="hidden"
-name="aksi"
-value="lihat">
+<form method="POST">
 
 <input
 type="password"
@@ -20,7 +59,7 @@ name="master"
 placeholder="Master Password"
 required>
 
-<button type="submit">
+<button>
 LIHAT DATA
 </button>
 
@@ -28,7 +67,7 @@ LIHAT DATA
 
 {% if hasil %}
 
-<table border="1">
+<table>
 
 <tr>
 <th>Game</th>
